@@ -112,7 +112,7 @@ export const spinTheWheel = async (req, res) => {
 // ------------------------
 export const getUserBalance = async (req, res) => {
   try {
-    const { userId } = req.body; // fetch from body
+    const { userId } = req.params; // fetch from body
     if (!userId) return res.status(400).json({ message: "userId is required" });
 
     const user = await User.findById(userId).select(

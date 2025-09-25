@@ -17,7 +17,7 @@ router.post("/ads/reward", generateRewardSpins);
 router.post("/spin", spinTheWheel);
 
 // get user balance
-router.get("/user/balance", getUserBalance);
+router.get("/user/balance/:userId", getUserBalance);
 
 //leadrboard
 router.get("/leaderboard", getLeaderboard);
